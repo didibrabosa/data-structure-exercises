@@ -1,22 +1,22 @@
-my_word = "pipa"
-print(my_word)
+# example 1:
+def invert_text(word):
+    return word[::-1]
 
-word_4 = "a"
-word_3 = "p"
-word_2 = "i"
-word_1 = "p"
 
-if word_4 in my_word:
-    print("have a latter 'a' here!")
+# example 2:
+def invert_text_2(word):
+    invert = "".join(reversed(word))
+    return invert
 
-if word_3 in my_word:
-    print("have a latter 'p' here!")
 
-if word_2 in my_word:
-    print("have a latter 'i' here!")
+# example 3:
+def invert_text_3(word):
+    invert = ""
+    for ch in word:
+        invert = ch + invert
+    return invert
 
-if word_1 in my_word:
-    print("have a latter 'p' here!")
 
-while my_word:
-    print(word_4 + word_3 + word_2 + word_1)
+test = invert_text_3(word="itaquaquisetuba")
+
+print(test)
